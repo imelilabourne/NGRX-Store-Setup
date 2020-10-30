@@ -1,0 +1,18 @@
+{
+    "customers":[
+        {
+            "name": "John Doe",
+            "phone": "09959143409",
+            "address": "Sydney, Australia",
+            "membership": "Platinum",
+            "id": 1
+        },
+        {
+            "name": "Jane Doe",
+            "phone": "09959143409",
+            "address": "Toronto, Canada",
+            "membership": "Pro",
+            "id": 2
+        }
+    ]
+}
