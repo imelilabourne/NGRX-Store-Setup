@@ -29,7 +29,8 @@ import { NavbarComponent } from "./navbar/navbar.component";
     StoreDevtoolsModule.instrument(),
     EffectsModule.forRoot([]),
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    EffectsModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]

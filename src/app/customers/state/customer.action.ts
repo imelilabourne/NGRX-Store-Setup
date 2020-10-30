@@ -1,7 +1,5 @@
-
-
 import { Update } from "@ngrx/entity";
-
+import { Action } from '@ngrx/store';
 import { Customer } from "../customer.model";
 
 export enum CustomerActionTypes {
@@ -22,17 +20,17 @@ export enum CustomerActionTypes {
   DELETE_CUSTOMER_FAIL = "[Customer] Delete Customer Fail"
 }
 
-export class LoadCustomers {
+export class LoadCustomers implements Action{
   readonly type = CustomerActionTypes.LOAD_CUSTOMERS;
 }
 
-export class LoadCustomersSuccess {
+export class LoadCustomersSuccess implements Action{
   readonly type = CustomerActionTypes.LOAD_CUSTOMERS_SUCCESS;
 
   constructor(public payload: Customer[]) {}
 }
 
-export class LoadCustomersFail {
+export class LoadCustomersFail implements Action{
   readonly type = CustomerActionTypes.LOAD_CUSTOMERS_FAIL;
 
   constructor(public payload: string) {}
@@ -65,7 +63,7 @@ export class CreateCustomer {
 export class CreateCustomerSuccess {
   readonly type = CustomerActionTypes.CREATE_CUSTOMER_SUCCESS;
 
-  constructor(public payload: Customer) {}
+  constructor(public payload: Customer[]) {}
 }
 
 export class CreateCustomerFail {
@@ -110,7 +108,7 @@ export class DeleteCustomerFail {
   constructor(public payload: string) {}
 }
 
-export type Action =
+export type Actions =
   | LoadCustomers
   | LoadCustomersSuccess
   | LoadCustomersFail
